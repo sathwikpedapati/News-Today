@@ -15,7 +15,6 @@ https://news-platform-sand.vercel.app/login
 * Secure JWT-based authentication (signup & login)
 * Email alerts on signup, login, and profile changes
 * Profile picture upload via Cloudinary
-* Light & dark mode toggle after login
 * View, update, or delete user profile
 * Access profile & theme settings only when logged in
 
