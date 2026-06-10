@@ -2,20 +2,9 @@ import React from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { Button, message } from 'antd';
 
-const Navbar = ({ setCategory, theme = 'light', setTheme }) => {
+const Navbar = ({ setCategory }) => {
   const navigate = useNavigate();
   const logedinuser = JSON.parse(localStorage.getItem("user"));
-  const isDark = theme === 'dark';
-  const navClass = isDark ? 'navbar-dark bg-dark' : 'navbar-light bg-light';
-  const badgeClass = isDark ? 'bg-light text-dark' : 'bg-dark text-light';
-
-  const toggleTheme = () => {
-    if (typeof setTheme === 'function') {
-      setTheme(prev => (prev === 'dark' ? 'light' : 'dark'));
-    } else {
-      console.warn("setTheme function not provided to Navbar.");
-    }
-  };
 
   const logout = () => {
     localStorage.removeItem("user");
@@ -24,10 +13,10 @@ const Navbar = ({ setCategory, theme = 'light', setTheme }) => {
   };
 
   return (
-    <nav className={`navbar navbar-expand-lg ${navClass}`} data-bs-theme={theme}>
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
         <a className="navbar-brand" href="/">
-          <span className={`badge ${badgeClass} fs-4`}>News Today</span>
+          <span className="badge bg-dark text-light fs-4">News Today</span>
         </a>
 
         {logedinuser ? (
@@ -83,20 +72,10 @@ const Navbar = ({ setCategory, theme = 'light', setTheme }) => {
                     </li>
                   </ul>
                 </div>
-
-                <button onClick={toggleTheme} className="btn btn-outline-secondary">
-                  Theme
-                </button>
               </div>
             </div>
           </>
-        ) : (
-          <div className="d-flex align-items-center" style={{ marginLeft: 'auto' }}>
-            <button onClick={toggleTheme} className="btn btn-outline-secondary">
-              Theme
-            </button>
-          </div>
-        )}
+        ) : null}
       </div>
     </nav>
   );

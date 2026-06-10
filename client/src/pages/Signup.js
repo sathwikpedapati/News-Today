@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { UploadOutlined } from '@ant-design/icons';
 import axios from 'axios';
 
-const Signup = ({ theme, setTheme }) => {
+const Signup = () => {
   const navigate = useNavigate();
 
 
@@ -63,7 +63,7 @@ const Signup = ({ theme, setTheme }) => {
           onFinish={onFinish}
           autoComplete="off"
         >
-          <h2 style={{ textAlign: "center", lineHeight: '4rem', color: theme === 'dark' ? '#e0e0e0' : '#333' }}>Sign-Up</h2>
+          <h2 style={{ textAlign: "center", lineHeight: '4rem', color: '#333' }}>Sign-Up</h2>
 
           <Form.Item
             label="Username"
@@ -102,7 +102,7 @@ const Signup = ({ theme, setTheme }) => {
           </Form.Item>
 
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: "center" }}>
-            <Link to="/login" style={{ marginBottom: '10px', color: theme === 'dark' ? '#e0e0e0' : '#333' }}>
+            <Link to="/login" style={{ marginBottom: '10px', color: '#333' }}>
               Already have an account?
             </Link>
             <Form.Item>

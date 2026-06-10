@@ -3,7 +3,7 @@ import { Button, Form, Input, message } from 'antd';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-const Login = ({ theme, setTheme }) => {
+const Login = () => {
   const navigate = useNavigate();
 
 
@@ -45,7 +45,7 @@ const Login = ({ theme, setTheme }) => {
           onFinish={onFinish}
           autoComplete="off"
         >
-          <h2 style={{ textAlign: "center", lineHeight: '4rem', color: theme === 'dark' ? '#e0e0e0' : '#333' }}>Log-In</h2>
+          <h2 style={{ textAlign: "center", lineHeight: '4rem', color: '#333' }}>Log-In</h2>
 
           <Form.Item
             label="Email"

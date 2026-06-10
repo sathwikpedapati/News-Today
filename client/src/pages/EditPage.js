@@ -5,7 +5,7 @@ import { UploadOutlined, DeleteOutlined } from '@ant-design/icons';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
-const EditPage = ({ theme, setTheme }) => {
+const EditPage = () => {
   const navigate = useNavigate();
   const [form] = Form.useForm();
   const user = JSON.parse(localStorage.getItem("user"));
@@ -68,7 +68,7 @@ const EditPage = ({ theme, setTheme }) => {
 
   return (
     <>
-      <Navbar theme={theme} setTheme={setTheme} />
+      <Navbar />
       <div style={{ display: 'flex', justifyContent: 'center', marginTop: '50px' }}>
         <Form
           form={form}
@@ -76,7 +76,7 @@ const EditPage = ({ theme, setTheme }) => {
           onFinish={onFinish}
           style={{ width: 500 }}
         >
-          <h2 style={{ textAlign: 'center', color: theme === 'dark' ? '#d3d3d3' : '#333' }}>
+          <h2 style={{ textAlign: 'center', color: '#333' }}>
             Edit Profile
           </h2>
 

@@ -3,7 +3,7 @@ import Navbar from '../Components/Navbar';
 import { Card, Space, Avatar } from 'antd';
 import { useNavigate, Link } from 'react-router-dom';
 
-const ViewPage = ({ theme, setTheme }) => {
+const ViewPage = () => {
   const navigate = useNavigate();
   const [user] = useState(() => {
     try {
@@ -23,7 +23,7 @@ const ViewPage = ({ theme, setTheme }) => {
 
   return (
     <>
-      <Navbar theme={theme} setTheme={setTheme} />
+      <Navbar />
 
       <div style={{
         display: 'flex',

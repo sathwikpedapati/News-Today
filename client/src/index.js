@@ -1,5 +1,5 @@
 // index.js
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
@@ -15,32 +15,19 @@ import EditPage from './pages/EditPage';
 import PrivateRoute from './Components/PrivateRoute';
 
 const RootApp = () => {
-  // Theme state
-  const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'dark');
-
-  useEffect(() => {
-    // Apply theme
-    document.body.setAttribute('data-bs-theme', theme);
-    document.body.style.backgroundColor = theme === 'dark' ? '#121212' : '#f8f9fa';
-    document.body.style.color = theme === 'dark' ? '#ffffff' : '#000000';
-
-    // Save to localStorage
-    localStorage.setItem('theme', theme);
-  }, [theme]);
-
   return (
     <BrowserRouter>
       <Routes>
         {/* Public Routes */}
-        <Route path="/login" element={<Login theme={theme} setTheme={setTheme} />} />
-        <Route path="/signup" element={<Signup theme={theme} setTheme={setTheme} />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
 
         {/* Private Routes */}
         <Route
           path="/"
           element={
             <PrivateRoute>
-              <App theme={theme} setTheme={setTheme} />
+              <App />
             </PrivateRoute>
           }
         />
@@ -48,7 +35,7 @@ const RootApp = () => {
           path="/view"
           element={
             <PrivateRoute>
-              <ViewPage theme={theme} setTheme={setTheme} />
+              <ViewPage />
             </PrivateRoute>
           }
         />
@@ -56,7 +43,7 @@ const RootApp = () => {
           path="/edit"
           element={
             <PrivateRoute>
-              <EditPage theme={theme} setTheme={setTheme} />
+              <EditPage />
             </PrivateRoute>
           }
         />
@@ -66,7 +53,7 @@ const RootApp = () => {
           path="*"
           element={
             <PrivateRoute>
-              <App theme={theme} setTheme={setTheme} />
+              <App />
             </PrivateRoute>
           }
         />
