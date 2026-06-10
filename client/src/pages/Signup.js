@@ -29,7 +29,7 @@ const Signup = ({ theme, setTheme }) => {
 
     try {
       const res = await axios.post(
-        "https://news-backend-black.vercel.app/api/auth/signup",
+        "https://news-gold-tau.vercel.app/api/auth/signup",
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" }
