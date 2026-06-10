@@ -1,7 +1,7 @@
 
 # 📰 News Today – A Full-Stack Live News Web App
 
-After **80+ hours of development**, I'm excited to share **News Today**, a full-stack web application that delivers real-time news by category with a smooth, secure, and user-friendly experience.
+**News Today**, a full-stack web application that delivers real-time news by category with a smooth, secure, and user-friendly experience.
 
 ## 🔗 Live Demo
 
