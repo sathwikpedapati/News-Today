@@ -43,7 +43,7 @@ https://news-platform-sand.vercel.app/login
 
 ### Deployment
 
-* Render (Backend)
+* Vercel (Backend)
 * Vercel (Frontend)
 
 ## 📂 Source Code
