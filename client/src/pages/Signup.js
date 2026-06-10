@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import Navbar from '../Components/Navbar';
 import { Button, Form, Input, Upload, message } from 'antd';
 import { Link, useNavigate } from 'react-router-dom';
 import { UploadOutlined } from '@ant-design/icons';

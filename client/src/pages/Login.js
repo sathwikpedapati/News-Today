@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import Navbar from '../Components/Navbar';
 import { Button, Form, Input, message } from 'antd';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';

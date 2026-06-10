@@ -5,7 +5,7 @@ import { useNavigate, Link } from 'react-router-dom';
 
 const ViewPage = ({ theme, setTheme }) => {
   const navigate = useNavigate();
-  const [user, setUser] = useState(() => {
+  const [user] = useState(() => {
     try {
       return JSON.parse(localStorage.getItem("user"));
     } catch {
