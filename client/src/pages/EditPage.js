@@ -34,7 +34,7 @@ const EditPage = ({ theme, setTheme }) => {
     }
 
     try {
-      const res = await axios.post("https://news-backend-black.vercel.app/api/auth/edit", formData, {
+      const res = await axios.post("https://news-gold-tau.vercel.app/api/auth/edit", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
           token: token,
