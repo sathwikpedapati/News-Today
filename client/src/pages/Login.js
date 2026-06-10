@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Button, Form, Input, message } from 'antd';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -6,11 +6,6 @@ import axios from 'axios';
 const Login = ({ theme, setTheme }) => {
   const navigate = useNavigate();
 
-  useEffect(() => {
-    document.body.setAttribute('data-bs-theme', 'light');
-    document.body.style.backgroundColor = '#f8f9fa';
-    document.body.style.color = '#000000';
-  }, []);
 
   const onFinish = async (values) => {
     try {
@@ -50,7 +45,7 @@ const Login = ({ theme, setTheme }) => {
           onFinish={onFinish}
           autoComplete="off"
         >
-          <h2 style={{ textAlign: "center", lineHeight: '4rem', color: "#333" }}>Log-In</h2>
+          <h2 style={{ textAlign: "center", lineHeight: '4rem', color: theme === 'dark' ? '#e0e0e0' : '#333' }}>Log-In</h2>
 
           <Form.Item
             label="Email"

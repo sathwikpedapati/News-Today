@@ -32,8 +32,8 @@ const RootApp = () => {
     <BrowserRouter>
       <Routes>
         {/* Public Routes */}
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login theme={theme} setTheme={setTheme} />} />
+        <Route path="/signup" element={<Signup theme={theme} setTheme={setTheme} />} />
 
         {/* Private Routes */}
         <Route
